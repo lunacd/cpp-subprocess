@@ -939,6 +939,7 @@ public:
   Buffer() {}
   explicit Buffer(size_t cap) { buf.resize(cap); }
   void add_cap(size_t cap) { buf.resize(cap); }
+  std::string string() const { return std::string(buf.begin(), buf.end()); }
 
 #if 0
   Buffer(const Buffer& other):
